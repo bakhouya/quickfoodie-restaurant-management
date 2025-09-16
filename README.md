@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# quickfoodie-restaurant-management
+QuickFoodie – An integrated restaurant and café management system with a modern, user-friendly interface. Features include table and order management, menu categories, sales tracking, staff management, and billing reports to improve daily operations and efficiency.
+>>>>>>> 2965d2c538f0ed2c54f87cca4d06c86c48c081e1
