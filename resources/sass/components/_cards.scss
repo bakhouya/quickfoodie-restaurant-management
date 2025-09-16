@@ -1,0 +1,214 @@
+.cards {
+    @include grid(2) ;
+    gap: $sp ;
+}
+.card_primary {
+    background-color: $face ;
+    border-radius: $rp ;
+    border: 1px solid $border ;
+    cursor: pointer ;
+    height: max-content ;
+    @include transition() ;
+    .header_card {
+        @include flex(center, center, 0) ;
+        border-bottom: 1px solid $border ;
+        overflow: hidden ;
+        position: relative ;
+        aspect-ratio: 4/4.1 ;
+        .item {
+            @include transition() ;
+            height: 90% ; width: 90% ;
+        }
+    }
+    .footer_card {
+        border-block-start: 1px solid $border ;
+    }
+    .body_card {
+        padding:$ps $pp ;
+    }
+    &:hover {
+        border-color: $border  ;
+        img {
+            transform: scale(1.04) ;
+        }
+    }
+}
+// ======================================
+.card_form {
+    background-color: $face ;
+    border-radius: $rp ;
+    // border: 1px solid $border ;
+    .header_card_form {
+        height: 55px ;
+        border-block-end: 1px solid $border ;
+    }
+    .body_card_form {
+        @include grid(1) ;
+        gap: $ss ;
+        padding: $pp !important;
+    }
+    .footer_card_form {
+        border-block-start: 1px solid $border ;
+        padding: $pp ;
+    }
+}
+
+.action_card {
+    width: 40% ;
+}
+.btn_actions {
+    height: 35px ;
+    @include flex(center, center, 0) ;
+    border-inline-end: 1px solid $border ;
+    &:last-child {border: 0 ;}
+}
+.absolute_card {
+    position: absolute ;
+    inset-inline-start: $pp ;
+    inset-block-start: $ps ;
+    width: calc(100% - calc($pp*2));
+}
+.status_item {
+    position: relative;
+    padding: 5px 12px ;
+    padding-inline-start: 23px ;
+    border-radius: $rs ;
+    &::after {
+        content: "";
+        position: absolute ;
+        inset-inline-start: 7px ;
+        top: 50% ;
+        transform: translateY(-50%);
+        width: 8px ; height: 8px ;
+        border-radius: $rs ;
+    }
+    &.active {
+        border: 1px solid $success-color;
+        &::after {background-color: $success-color;}
+        &.text {color: $success-color;}
+    }
+    &.desable {
+        border: 1px solid $danger-color ;
+        &::after {background-color: $danger-color;}
+        &.text {color: $danger-color !important;}
+    }
+}
+.reveal {
+    position: relative;
+    transform: translateY(100px) ;
+    transition: 0.7s all ease ;
+    opacity: 0 ;    
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1 ;
+}
+
+
+// ================================card flex primary ============
+.cards_flex{
+    @include grid(1) ;
+    gap: $pp ;
+    align-self: start;
+}
+.card {
+    position: relative;
+    @include flex(start,start, 0) ;
+    background-color: $face ;
+    border-radius: $rp ;
+    border: 1px dashed $border ;
+    cursor: pointer;
+    height: max-content ;
+    overflow: hidden ;
+    // transform:  translateY(100px) scale(0.6);
+    // animation: identifier linear forwards;
+    // animation-timeline: view();
+    // animation-range: entry 0% ;
+    .header_card{
+        width: 75px ;
+        overflow: hidden ;
+        position: relative ;
+        aspect-ratio: 4/4 ;
+        padding: 10px ;
+        @include flex(center,center, 0) ;
+        border-inline-end: 1px solid $border ;
+        img {
+            width: 90% ; height: 90% ;
+        }
+    }
+    .body_card{
+        width: calc(100% - 75px) ;
+        .cotent_body_card {
+            padding: $ps $pp;
+        }
+    }
+    .footer_card{
+        border-block-start: 1px solid $border;
+        display:none ;
+    }
+    &.selected {
+        opacity: 0.5;
+        border: 1px solid $primary-color ;
+    }
+    .details_card{
+        @include flex(start, center, 0) ;
+    }
+}
+.cards_block{
+    @include grid(2) ;
+    gap: $pp ;
+    align-self: start;
+    .card {
+        display: block !important;
+        border:1px solid $border ;
+    }
+    .header_card{
+        width: 100% ;
+        border:none ;
+        border-block-end: 1px solid $border ;
+        border-radius: 0 0 $rp $rp ;
+        // background: -webkit-linear-gradient(bottom, rgb(31, 35, 36) 20%, transparent 80%);
+    }
+    .body_card{
+        width: 100% ;
+        .cotent_body_card {
+            padding: $ps $pp;
+        }
+    }
+    .actions_card{
+        position: absolute ;
+        bottom: 90px ;
+        inset-inline-end: 50% ;
+        transform: translateX(50%) ;
+        .action {
+            border: 1px solid $border ;
+            height: 35px ;
+            width: 35px ;
+            @include flex(center, center, 0) ;
+            border-inline-end: 0 ;
+            background-color: $face ;
+            border-radius: $rp ;
+            box-shadow: 0 0 14px 10px rgba(31, 32, 34, 0.39) ;
+        }
+    }
+    .details_card{
+        @include flex(space-between, center, 0) ;
+        width: 100% ;
+    }
+}
+.bg_svg {
+    position: absolute ;
+    inset-inline-start: 0 ;
+    inset-block-end: 0px ;
+    transform: rotateY(180deg);
+}
+@keyframes identifier {
+    from{
+        opacity: 0 ;
+        transform: translateY(40px) scale(0.1);
+    }
+    to{
+        opacity: 1 ;
+        transform: translateY(0px) scale(1);
+    }
+}

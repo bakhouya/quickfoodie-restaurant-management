@@ -1,0 +1,91 @@
+
+button {
+    border: 0 ;
+    outline: 0 ;
+    background-color: transparent ;
+    font-family: $font ;
+    font-weight: $weight-s ;
+    position: relative;
+}
+.btn {
+    @include flex(center, center, 0) ;
+    @include transition() ;
+    position: relative;
+    height: 45px ;
+    padding: 4px 20px ;
+    cursor: pointer ;
+    border-radius: $rp ;
+    overflow: hidden ;
+    &:hover {opacity: 0.7 ;}
+    &_primary {
+        background: $gradient ;
+    }
+    &_secoundary {
+        background: $gradient2 ;
+    }
+    &_danger {
+        background: $danger-color ;
+    }
+    &_success {
+        background: $success-color ;
+    }
+    &_default {
+        background-color: $border ;
+    }
+    &.sm {
+        height: 40px ;
+    }
+    &.disable {
+        cursor: col-resize ;
+        background : $border !important;
+    }
+    
+}
+.btn_link {
+    @include flex(center, center, 0) ;
+    @include transition() ;
+    position: relative;
+    height: 36px ;
+    padding: 4px ;
+    cursor: pointer ;
+    border-radius: 4px ;
+    overflow: hidden ;
+}
+.btn_icon {
+    @include flex(center, center, 0) ;
+    width: 38px ;
+    height: 38px ;
+    border-radius: $rs ;
+    &.primary {
+        background: $gradient ;
+    }
+    &.flex {
+        padding-inline: 10px ;
+        width: max-content ;
+    }
+    &:hover {
+        background-color: $border ;
+    }
+    &.default {
+        background-color: $bg ;
+    }
+}
+.btn_outline {
+    height: 30px ;
+    @include flex(center, center, 0) ;
+    padding-inline: 10px ;
+    border-radius: $rp ;
+    &.danger {
+        border: 1px solid $danger-color ;
+    }
+}
+.btn_remove {
+    position: absolute ;
+    inset-inline-end: 3px ;
+    inset-block-start: 3px ;
+    width: 26px ;
+    height: 26px ;
+    border-radius: $rx ;
+    background-color: $bg ;
+    @include flex(center, center, 0) ;
+}

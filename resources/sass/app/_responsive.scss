@@ -1,0 +1,51 @@
+@media (max-width: 600px){
+    .main_page {
+        width: 100% ;
+        .main_container {
+            display: block ;
+            .container_primary {
+                padding: $pp ;
+                width: 100% ;
+            }
+            .container_secoundary {
+                width: 100% ;
+                display: none ;
+            }
+        }
+    }
+    .navbar_primary {
+        display: none ;
+    }
+    .cards {
+        @include grid(1) ;
+        gap: $ps ;
+    }
+    .wrapper_controller {
+        margin-bottom: $ps ;
+    }
+    .wrapper_index {
+        @include grid(1) ;
+        gap: $ps ;
+    }
+
+
+    // =========================
+    .model_primary, .confirm_trach {
+        @include flex(center, end, 0) ;
+        padding: 10px ;
+        .content_model {
+            width: 100% ;
+            animation : animationModel 0.2s ease-in-out ;
+        }
+        .form_model {
+            max-height: calc(100vh - 200px) ;
+            overflow: auto ;
+            padding: $pp ;
+        }
+    }
+    .box_confirm {
+        width: 100% ;
+        animation : animationModel 0.2s ease-in-out ;
+    }
+    
+}

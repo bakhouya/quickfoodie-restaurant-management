@@ -1,0 +1,18 @@
+.text {
+    text-transform: capitalize;
+    &.headline_primary {
+        font-size: 22px ;
+    }
+    &.headline_secoundary {
+        font-size: 20px ;
+    }
+    &.headline_section {
+        font-size: 40px ;
+    }
+    &.truncate {
+        width: 50% ;
+        white-space: nowrap ;
+        overflow: hidden ;
+        text-overflow: ellipsis ;
+    }
+}

@@ -1,0 +1,55 @@
+@mixin flex($justify, $align , $gap) {
+    display : flex !important;
+    justify-content: $justify ;
+    align-items: $align ;
+    gap : $gap ;
+}
+@mixin grid($grid){
+    display: grid ;
+    grid-template-columns: repeat($grid, 1fr) ;
+    gap: 0 ;
+}
+@mixin transition(){
+    transition: ease-in-out 0.5s ;
+}
+@mixin box(){
+    @include transition() ;
+    background-color: $face ;
+    // border: 1px solid $border ;
+    border-radius: $rp ;
+}
+@mixin rander(){
+    &::after {
+        content: "" ;
+        inset-block-end: -40px  ;
+        inset-inline-start: 0 ;
+        border-radius: $rs ;
+        position: absolute ;
+        width: 40px ;
+        height: 40px ;
+        box-shadow: -20px -20px $face ;
+    }
+    &::before {
+        content: "" ;
+        inset-block-end: -40px  ;
+        inset-inline-end: 0 ;
+        border-radius: $rs ;
+        position: absolute ;
+        width: 40px ;
+        height: 40px ;
+        box-shadow: 20px -20px $face ;
+    }
+}
+@mixin active(){
+    @include transition() ;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute ;
+        border: 10px solid ;
+        inset-inline-start: 50% ;
+        inset-block-end: -21px ;
+        transform: translateX(-50%);
+        border-color: $primary-color transparent transparent transparent ;
+    }
+}

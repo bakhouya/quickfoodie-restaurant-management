@@ -1,0 +1,66 @@
+.costs_container {
+    @include flex(start,start,0) ;
+    .nav_costs {
+        width: $nav-h ;
+        @include grid(1) ;
+        gap: $pp ;
+        padding-block: $pp ;
+        position: sticky;
+        top:$hp ;
+        .nav_header_costs {
+            margin-inline: $pp ;
+        }
+    }
+    .content_costs {
+        width: calc(100% - $nav-h) ;
+        min-height: calc(100vh - calc($hp + 4px)) ;
+        border-inline-start: 1px solid $border;
+    }
+}
+.elements_costs {
+    overflow: auto;
+    max-height: calc(100vh - calc($hp * 2.2)) ;
+    padding-inline: $pp $ps;
+    gap:$ps ;
+}
+.image_item {
+    width: 45px ;
+    aspect-ratio: 4/4 ;
+    position: relative ;
+    img {
+        width: 100% ; height:100% ;
+        border-radius: $rp ;
+    }
+}
+.image_sd {
+    width: 40% ;
+    // aspect-ratio: 4/4 ;
+    position: relative ;
+    img {
+        width: 100% ; height:100% ;
+        border-radius: $rp ;
+    } 
+}
+.item_cost {
+    background-color: $face ;
+    padding: $ps ;
+    border-radius: $rp ;
+    cursor: pointer ;
+    border:1px solid transparent ;
+    &:hover,&.active {
+        border-color:$primary-color ;
+    }
+}
+
+.body_content_costs {
+    padding: $pp ;
+    @include grid(3) ;
+    gap: $pp ;
+}
+.card_cost_add{
+    text-align: center ;
+    padding: $ps $pp;
+    background-color: $face ;
+    border-radius: $rp ;
+    cursor: pointer;
+}

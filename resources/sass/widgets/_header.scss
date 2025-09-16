@@ -1,0 +1,28 @@
+
+.card_mode {
+    height: 55px ;
+    border-radius: $rp ;
+    padding: 5px ;
+    cursor: pointer;
+    .header_mode {
+        height: 12px ;
+        border-radius: $rp ;
+    }
+    &.dark_1{
+        background-color: #111111;
+        .header_mode {background-color: #222222 ;}
+    }
+    &.dark_2{
+        background-color: #14161b;
+        .header_mode {background-color: #181a1f ;}
+    }
+    &.dark_3{
+        background-color: #1e1f1e;
+        .header_mode {background-color: #232423 ;}
+    }
+    &.dark_4{
+        background-color: #F0F0F0;
+        .header_mode {background-color: #FFFFFF ;}
+    }
+}
+

@@ -1,0 +1,38 @@
+.alert {
+    padding: 10px ;
+    border-radius: $rp ;
+    margin-bottom: 10px ;
+    &.alert_primary {
+        background-color: $primary-color ;
+    }
+    &.alert_default {
+        background-color: $face ;
+    }
+    &.alert_secoundary {
+        background-color: $secoundary-color ;
+    }
+    &.alert_danger {
+        background-color: $danger-color ;
+    }
+    &.alert_success {
+        background-color: $success-color ;
+    }
+}
+.alert_message {
+    position: fixed ;
+    inset-inline-start: 50% ;
+    inset-block-start: calc($hp + $sp);
+    z-index: 200 ;
+    min-width: 350px ;
+    transform: translateX(-50%);
+    padding: $ps;
+    border-radius: $rp ;
+    display: none ;
+    animation: showUp 0.5s ease-in-out ;
+    &.success {
+        background-color: $success-color ;
+    }
+    &.error {
+        background-color: $danger-color ;
+    }
+}

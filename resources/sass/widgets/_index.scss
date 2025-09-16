@@ -1,0 +1,139 @@
+.wrapper_controller {
+    margin-bottom: $pp ;
+    border-radius: $rp ;
+    background-color: $face ;
+    padding: $ps ;
+    position: relative;
+    .header_controller {
+        padding: 8px 9px;
+        border: 1px solid $border ;
+        border-radius: $rs ;
+        .box_search {
+            width: calc(100% - 80px) ;
+        }
+    }
+}
+.wrapper_index {
+    @include grid(1) ;
+    gap: $pp ;
+}
+.card_item {
+    @include transition() ;
+    background-color: $face ;
+    border-radius : $rp ;
+    cursor: pointer ;
+    position: relative ;
+    height: max-content ;
+    border: 1px solid transparent ;
+    // animation: zoom 0.5s ease-in-out ;
+    .content_body_card {
+        padding: 0 0 0 $pp ;
+    }
+    // &:hover {
+    //     transform: rotate(340deg);
+    // }
+}
+.header_flex_card {
+    width: 70px  ;
+    border-inline-end: 1px solid $border;
+    padding: 8px ;
+    img {
+        width: 100% ;
+        aspect-ratio: 4/3.5 ; 
+        // border : 1px solid $border ;
+        // border-radius: $rp ;  
+    }
+}
+.card_flex_action {
+    @include flex(space-between, center, 9px) ;
+    border-radius : $rp $rp 0 0  ;
+    margin-inline-end : $ps ;
+    .btn_action {
+        @include flex(center, center, 0) ;
+        background-color: $face ;
+        border: 1px solid $border ;
+        height: 36px ;
+        width: 36px ;
+        border-radius: $rx ;
+    }
+}
+.select_miltu_action {
+    position: absolute ;
+    inset-inline-end: 0 ;
+    inset-block: 0 ;
+    width: 110px ;
+    padding-inline: $pp ;
+    z-index: 10 ;
+    @include flex(end, center, 0) ;
+    background: $face ;
+}
+
+.filter_box {
+    height: calc($hp) ;
+    border-block-end: 1px solid $border ; 
+    padding-inline : $pp ;   
+    .box_add_filter {
+        padding-inline-start: $pp ;
+        height: calc($hp) ;
+        // border-inline-start: 1px solid $border ;
+    }
+    .box_search_filter {
+        padding-inline-start : $ps ;
+        padding-inline-end : $sp ;
+        border-radius: $rp ;
+        width: calc(100%);
+        background-color : $face ;
+        border: 1px solid $border ;
+        @include flex(start, center, 0) ;
+        .search {
+            width: calc(100%) ;
+            position: relative ;
+            border-radius: $rp ;
+            height: 46px ;
+            padding-inline: 6px ;
+        }
+    }
+    .box_search {
+        width: calc(100%) ;
+        @include flex(space-between, center, 0) ;
+        input {
+            width: calc(100% - 35px) ;
+            height: 50px ;
+            padding-inline-start: 10px ;
+            &::placeholder {
+                font-size: 15.8px ;
+            }
+        }
+    }
+}
+.body_filter {
+    padding: $pp ;
+    @include grid(1) ;
+    gap: $ps ;
+    max-height: calc(100vh - calc($hp + 55px));
+    overflow: auto ;
+    .item_filter_box {
+        cursor: pointer;
+    }
+    .body_item_filter {
+        margin-block-start: $ps  ;
+        // @include grid(1) ;
+        gap: 12px ;
+    } 
+}
+.item_body_filter {
+    padding: 8px $ps ;
+    border-radius: $rp ;
+    cursor: pointer ;
+    background-color: $face ;
+    @include flex(center, center,0) ;
+    @include transition() ;
+    // border: 1px solid $border ;
+    &:has(input:checked){
+        background: $gradient ;
+        .text {
+            color: whitesmoke !important;
+        }
+    } 
+    
+}

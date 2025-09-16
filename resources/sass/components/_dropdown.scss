@@ -1,0 +1,43 @@
+.dropdown_primary {
+    position: absolute ;
+    width: 300px ;
+    background-color: $face ;
+    border: 1px solid $border ;
+    inset-block-start: 40px ;
+    inset-inline-end: 0 ;
+    z-index: 20 ;
+    border-radius: $rp ;
+    box-shadow: rgba(14, 13, 13, 0.671)  ;
+    padding: 12px ;
+    display: none ;
+}
+.get_dropDown {
+    &:hover {
+        .dropdown_primary{
+            display: block ;
+        }
+    }
+}
+.filter_box_float {
+    position: fixed ;
+    top: 0px ;
+    inset-inline-end: 0px ;
+    bottom: 0px ;
+    width: 380px ;
+    border: 1px solid $border ;
+    background-color: $face ;
+    border-radius: $rp ;
+    z-index: 120 ;
+    box-shadow: 0 0 10px 3px rgba(14, 13, 13, 0.671) ;
+}
+.body_filter_float {
+    height: calc(100vh - calc(55px));
+    overflow: auto ;
+}
+// ==============pagination=================
+.paginate_primary {
+    padding:$ps;
+    background-color: $face;
+    border-radius: $rp ;
+    border: 1px solid $border;
+}

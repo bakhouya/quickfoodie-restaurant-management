@@ -1,0 +1,50 @@
+
+
+$face : var(--face) ;
+$bg : var(--bg) ;
+$border : var(--border) ;
+$dark-color : #1d1d1f ;
+$danger-color : rgb(241, 66, 133) ;
+$success-color : rgb(29, 182, 131) ;
+
+
+
+
+$primary-text      : var(--primary-text) ;
+$secoundary-text   : var(--secoundary-text) ;
+$small-text        : var(--small-text) ;
+
+$primary-color      : var(--primary-color) ;
+$secoundary-color   : var(--secoundary-color) ;
+
+
+
+
+$gradient : -webkit-repeating-linear-gradient(45deg, $primary-color, $primary-color  , $primary-color);
+$gradient2 : -webkit-repeating-linear-gradient(45deg, $secoundary-color, rgb(248, 139, 14) , $secoundary-color);
+$gradient3 : -webkit-repeating-linear-gradient(left, $primary-color , $secoundary-color);
+
+
+
+$nav-h : 320px ;
+$card-border : 1px solid $border ;
+$hp : 70px ;
+
+$rp : 6px ;
+$rs : 25px ;
+$rx : 50% ;
+$rm : 50% 50% / 3% 3% ;
+
+$sp : 20px ;
+$ss : 15px ;
+
+$pp : 15px ;
+$ps : 10px ;
+
+
+
+
+
+
+
+

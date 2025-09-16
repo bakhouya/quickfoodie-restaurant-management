@@ -1,0 +1,140 @@
+.navbar_primary {
+    position: sticky ;
+    overflow: auto ;
+    top: 0 ;
+    margin-inline-end: 0 ;
+    height: calc(100vh);
+    width: $nav-h ;
+    border-radius: 0 ;
+    border-inline-end: $card-border ;
+    background-color: $bg ;
+}
+
+.nav_hr {
+    height: 1px ;
+    background-color: $border ;
+    margin-inline: $pp ;
+}
+.nav_logo {
+    height: calc($hp - 1px) ;
+    padding-inline: $pp ;
+    @include flex(space-between, center, 0) ;
+    .primary_logo {
+        position: relative;
+        height: 48px ;
+        @include flex(space-between, center, $pp) ;
+        img {
+            height: 100% ;
+        }
+    }
+}
+.nav_items {
+    padding-inline: $ps ;
+    margin-inline-end: 2px ;
+    .nav-item {
+        .nav-link {
+            @include flex(space-between, center, 0) ;
+            position: relative;
+            @include transition() ;
+            padding: 8px $ps ;
+            border-radius: $rp ;
+            cursor: pointer;
+            border: 1px solid transparent ;
+            .flex_start_center {gap : 17px ;}
+            &:hover, &.active {
+                background-color: $face ;
+                border-color : $border ;
+                .nav-active  {
+                    inset-inline-start: 0 ;
+                    opacity: 1 ;
+                }
+                .text{
+                    color: $primary-color ;
+                }
+            }
+        }
+        .nav-active {
+            @include transition() ;
+            width: 8px ; height: 8px ;
+            background: $gradient ;
+            border-radius: 2px ;
+            position: relative;
+            margin: 2px $ps 0 $ps;
+            inset-inline-start: -30px ;
+            opacity: 0 ;
+            transform: rotate(45deg);
+        }
+    }
+    .nav-icon {
+        @include transition() ;
+        height: 33px ;
+        width: 33px ;
+        @include flex(center, center, 0) ;
+        background-color: $face ;
+        border-radius: $rp ;
+        border: 1px solid $border ;
+        svg {
+            stroke: $primary-color  ;
+            fill: transparent ;
+            width: 25px !important;
+            height: 25px !important;
+        }
+    }
+    .nav-head {
+        position: relative;
+        height: 30px ;
+        width: 100% ;
+        @include flex(start, center, 0) ;
+        &::after {
+            content: "" ;
+            position: absolute ;
+            height: 0.4px ;
+            // background-color: $border ;
+            border-radius: $rp ;
+            inset-inline: 0 ;
+            inset-block: 50% ;
+        }
+        .text {
+            // background-color: $bg ;
+            position: relative;
+            z-index: 1 ;
+            padding-inline-end: 15px ;
+            font-weight: 500 ;
+        }
+    }
+}
+
+
+.header {
+    position: sticky ;
+    top: 0 ;
+    inset-inline-start: -2px ;
+    height: $hp ;
+    background-color: $bg ;
+    border-start-start-radius: 0 ;
+    border-end-start-radius: 0 ;
+    z-index: 100 ;
+    border-block-end: $card-border ;
+    padding-inline: $sp ;
+    @include flex(space-between, center, 0) ;
+}
+.header_search {
+    height: 45px ;
+    width: calc(100% - 350px) ;
+    border: 1px solid $border ;
+    border-radius: $rs ;
+    padding-inline : $pp ;
+    @include flex(start, center, 0) ;
+    // background-color: $bg ;
+}
+.actions {
+    gap: 4px ;
+    .icon_btn {
+        background-color: $face ;
+    }
+}
+
+.headline_primary {
+    font-size: 28px ;
+    // font-weight: $weight-s ;
+}

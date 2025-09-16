@@ -1,0 +1,63 @@
+img { object-fit: cover ; @include transition();}
+.priview_files {
+    @include grid(4) ;
+    gap: $ps ;
+    .item_file {
+        position: relative ;
+        border: 1px solid $border ;
+        border-radius:$rp ;
+        padding: 5px ;
+        @include flex(center,center,0);
+        img {
+            width: 100%;
+            aspect-ratio: 4/4 ;
+            border-radius: $rp ;
+        }
+    }
+}
+.priv_1 {
+    position: relative ;
+    @include grid(1) ;
+    gap: $ss ;
+    .item_file {
+        position: relative ;
+        img {
+            aspect-ratio: 4/1.6 ;
+            border-radius: $rp ;
+        }
+    }
+}
+.form_preview_file {
+    position: relative;
+    width: 100% ;
+    aspect-ratio: 4/3 ;
+    padding: 20px ;
+    @include flex(center, center,0) ;
+    background-color: $bg ;
+    border-radius : $rp ;
+    img { 
+        border-radius : $rp ;
+        max-width: 90% ;
+        max-height: 90% ;
+    }
+}
+.settings_preview_file {
+    position: relative;
+    width: 150px ;
+    aspect-ratio: 4/4 ;
+    padding: 20px ;
+    @include flex(center, center,0) ;
+    background-color: $bg ;
+    border-radius : $rp ;
+    img { 
+        border-radius : $rp ;
+        max-width: 90% ;
+        max-height: 90% ;
+    }
+}
+// =============================
+.avatar_small {
+    width : 14px ;
+    aspect-ratio: 4/4 ;
+    border-radius: $rx ;
+}

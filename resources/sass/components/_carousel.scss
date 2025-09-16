@@ -1,0 +1,28 @@
+.carousel_card {
+    width: 100% ;
+    aspect-ratio: 4/3.8 ;
+    position: relative ;
+    .item {
+        position: absolute ;
+        inset: 0 ;
+        display: none ;
+        @include transition() ;
+    }
+}
+
+.controller_carousel {
+    position: absolute ;
+    bottom: $pp ;
+    left: 50% ;
+    transform: translateX(-50%);
+    @include flex(start, center, 7px) ;
+    .btn_nav_caraousel {
+        width: 12px ; height: 12px ;
+        border-radius: $rx ;
+        background-color: $bg ;
+        border: 1px solid $border ;
+        &.active {
+            background: $gradient;
+        }
+    }
+}

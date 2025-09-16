@@ -1,0 +1,175 @@
+.section_page {
+    @include flex(space-between,start,0) ;
+    .filter_wrapper {
+        @include transition() ;
+        width: 70px  ;
+        position: sticky ;
+        top: $hp ;
+        &.active {
+            width: 390px ;
+        }
+    }
+    .container_cards {
+        @include transition() ;
+        width: calc(100% - 70px) ;
+        min-height: 600px;
+        border-inline-end: 1px solid $border ;
+        &.active {
+            width: calc(100% - 390px) ;
+        }
+    }
+}
+.header_primary {
+    height: 55px ;
+    @include flex(space-between, center, $pp) ;
+    padding: $pp ;
+    border-bottom: 1px solid $border ;
+    &.p_sticky {
+        z-index: 10 ;
+        position: sticky !important;
+        top: $hp ;
+        background-color: $bg ; 
+    }
+}
+.footer_primary {
+    // height: 55px ;
+    padding: 8px $pp;
+}
+.body_primary {
+    padding: 8px $pp ;
+}
+.hr_card {
+    height: 1px ;
+    background-color: $border ;
+    margin-inline: $pp ;
+}
+.empty_data {
+    width: 100% ;
+    height: 300px ;
+}
+// ===============cards=================
+.cards_primary {
+    display: grid ;
+    grid-template-columns: 1fr ;
+    gap : $pp ;
+    padding: $sp ;
+    .card_flex {
+        @include box() ;
+        height: 60px ;
+        @include flex(start, center, $pp) ;
+        cursor: pointer;
+        position: relative;
+        border : 1px solid $border ;
+        .header_card_flex {
+            width: 60px ;
+            @include flex(center, center,0) ;
+            border-inline-end: 1px solid $border ;
+            height: 100% ;
+        }
+        .footer_card_flex {
+            @include transition() ;
+            position: absolute ;
+            inset-inline-end: -100px ;
+            transform: translateY(-50%);
+            top: 50% ;
+            opacity: 0 ;
+            inset-inline-end: $ps ;
+            opacity: 1 ;
+        }
+        &:hover {
+            .footer_card_flex{
+                inset-inline-end: $ps ;
+                opacity: 1 ;
+            }
+        }
+        &.danger {
+            border : 1px solid $danger-color ;
+        }
+        &.primary {
+            border : 1px solid $secoundary-color ;
+        }
+        &.success {
+            border : 1px solid $success-color ;
+        }
+    }
+}
+// ====================order details===========================
+.wrapper_details_order {
+    background-color: $bg ;
+    background-color: $face ;
+    .header_info_order {
+        padding: $ps $pp;
+        @include flex(space-between, center,0) ;
+        .center_grid {
+            @include flex(start, center,0) ;
+            width: calc(100% - 55px) ;
+            gap: $ps ;
+        }
+        .item_order {
+            position: relative;
+            border: 1px solid $border ;
+            border-radius: $rp ;
+            width:  55px ;
+            aspect-ratio: 4/4 ;
+            padding: 5px ;
+            cursor: pointer;
+            @include flex(center, center,0) ;
+            width: 55px ;
+            background-color: $bg;
+            font-size: 45px ;
+            img {width:100%; height: 100%;}
+            &.active {
+                border: 2px solid $primary-color ;
+                @include active() ;
+            }
+        }
+    }
+    .body_info_order {
+        // @include flex(space-between, start, 0) ;
+        max-height: 300px ;
+        overflow: auto ;
+        .info_list_order {
+            border-inline-end: 1px solid $border ;
+            // width: 55%;
+        }
+        .types_action_order {
+            border-top: 1px solid $border ;
+        }
+    }
+    .card_details {
+        border-radius: $rp ;
+        background-color: $bg ;
+    }
+    .header_title_info {
+        border-bottom: 1px solid $border ;
+        padding: $ps $pp ;
+    }
+    .list_info_small {
+        padding: $pp ;
+        @include grid(1) ;
+        gap: 10px ;
+    }
+    .total_order {
+        background-color: $face ;
+        padding: $ps $pp;
+        border-top: 1px solid $border ;
+    }
+}
+.dropDown_primary {
+    width: 350px ;
+    position: relative ;
+    background-color: $face ;
+    border-radius: $rp ;
+    border: 1px solid $border ;
+    box-shadow: 0 0 10px 3px rgba(14, 13, 13, 0.671) ;
+    animation : zoom 0.5s ease-in-out ;
+    .body_select_box {
+        max-height: 350px ;
+        overflow: auto ;
+        // padding: 3px ;
+    }
+    .item_select {
+        padding: 10px ;
+        cursor: pointer;
+    }
+}

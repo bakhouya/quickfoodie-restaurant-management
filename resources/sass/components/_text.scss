@@ -1,0 +1,81 @@
+.text {
+    text-decoration: none ;
+    text-transform: capitalize ;
+    @include transition() ;
+    display: -webkit-box ;
+    -webkit-box-orient: vertical ;
+    overflow: hidden;
+     // ==========font size================================
+     &_primary {
+        font-size: $size-p ;
+        color: $primary-text ;
+    }
+    &_secoundary {
+        font-size: $size-s ;
+        color: $primary-text ;
+    }
+    &_small {
+        font-size: $size-x ;
+        color: $small-text ;
+        font-weight: normal ;
+    }
+    &.grey_text {
+        color: $small-text ;
+    }
+     // ==========font size================================
+
+    // ==========text-align================================
+    &.start {text-align: start;}
+    &.center {text-align: center;}
+    &.end {text-align: end;}
+    &.justify {text-align: justify;}
+    // ==========text-align================================
+
+    // ==========font size================================
+    &.size-p {font-size: $size-p;}
+    &.size-s {font-size: $size-s;}
+    &.size-x {font-size: $size-x;}
+    // ==========font size================================
+
+    // ==========weight================================
+    &.weight-p {font-weight: $weight-p;}
+    &.weight-s {font-weight: $weight-s;}
+    &.weight-x {font-weight: $weight-x;}
+    // ==========weight================================
+
+    // ==========line================================
+    &.line-p {line-height: $line-p;}
+    &.line-s {line-height: $line-s;}
+    &.line-x {line-height: $line-x;}
+    // ==========line================================
+
+}
+.clamp_2 {    
+    -webkit-line-clamp: 2 ;
+}
+.clamp_1 {
+    -webkit-line-clamp: 1 ;
+}
+.light_text {
+    color: $light-text ;
+}
+.title_primary {
+    font-size: 24px ;
+}
+.text_click {
+    cursor: pointer ;
+    position: relative;
+    &.active {
+        &::after {
+            content: "";
+            position: absolute ;
+            bottom: -16px ;
+            height: 2px ;
+            background-color: $primary-color ;
+            inset-inline: 0 ;
+        }
+        .text {
+            color: $primary-color ;
+        }
+    }
+}

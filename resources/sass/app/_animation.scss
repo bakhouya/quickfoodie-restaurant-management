@@ -1,0 +1,30 @@
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes leader {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes zoom {
+    0% {transform: scale(0.6);}
+    100% {transform: scale(1);}
+}
+@keyframes showUp {
+    0% {inset-block-start: -100px ;}
+    100% {inset-block-start: calc($hp + $sp );}
+}
+
+// ===========media============
+@keyframes animationModel{
+    0%{bottom: -100% ;}
+    100%{bottom: 0 ;}
+}
+@keyframes animationMessage{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}

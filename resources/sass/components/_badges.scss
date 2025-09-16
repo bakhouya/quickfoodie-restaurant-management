@@ -1,0 +1,61 @@
+.badge_absolute {
+    position: relative;
+    &::after {
+        content: attr(count);
+        @include flex(center, center, 0) ;
+        position: absolute ;
+        inset-block-start: -3px ;
+        inset-inline-end: -3px ;
+        width: 17px ;
+        height: 17px ;
+        background-color: $primary-color ;
+        color: $primary-text ;
+        border-radius: $rx ;
+        font-size: 13px ;
+        animation: pulse 0.5  infinite ;
+    }
+}
+.pulse {
+    width: 8px ; height: 8px ;
+    @include flex(center, center, 0) ;
+    position: absolute ;
+    inset-block-start: 6px ;
+    inset-inline-end: 7px ;
+    &::after {
+        content: "";
+        position: absolute ;
+        inset: 0 ;
+        background-color: $primary-color ;
+        color: $primary-text ;
+        border-radius: $rx ;
+    }
+    &::before {
+        content: "";
+        position: absolute ;
+        inset: 0 ;
+        background-color: $primary-color ;
+        color: $primary-text ;
+        border-radius: $rx ;
+        animation: pulse 2s ease-in-out infinite ;
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.8);
+        opacity: 0.2 ;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1 ;
+    }
+}
+
+.item_tags {
+    padding: 5px 10px ;
+    border-radius: $rp ;
+    background : $bg ;
+    @include flex(start, center, 7px) ;
+}

@@ -1,0 +1,105 @@
+.tabs_lang {
+    z-index: 2 ;
+    padding-inline-start: $pp ;
+    &.no_bg {
+        background-color: transparent !important;
+    }
+}
+.tabs_btn {
+    width: 22px ;
+    height: 22px ;
+    position: relative;
+    cursor: pointer;
+    border-radius: $rx ;
+    img {width: 100% ; height: 100% ; border-radius: $rx ;}
+    &.active {
+        &::before {
+            content: "" ;
+            position: absolute ;
+            inset : -3px ;
+            border: 2px solid $primary-color ;
+            border-radius: $rx ;
+        }
+        &::after {
+            content: "" ;
+            position: absolute ;
+            inset-block-end : -15px ;
+            left : 50% ;
+            transform: translateX(-50%) ;
+            border: 7px solid ;
+            border-color: $primary-color transparent transparent transparent;
+        }
+    }
+} 
+.container {
+    text-align: center;
+    padding: $ps $pp;
+    border-block-end: 1px solid $border ;
+}
+.etaps_list {
+    padding: $ps $pp;
+    border-block-start: 1px solid $border ;
+    .item_etap {
+        @include transition() ;
+        width: 12px ;
+        height: 12px ;
+        border-radius: $rs ;
+        background-color: $border ;
+        &.active {
+            background: $gradient ;
+            box-shadow: 0 0 10px 0 $face ;
+        }
+    }
+}
+
+.progress-container {
+    margin: auto ;
+    @include flex(space-between, center, 0) ;
+    position: relative;
+}
+.progress-bar-back {
+    position: absolute;
+    height: 8px;
+    width: 100% ;
+    background-color: $bg;
+    border-radius: $rs ;
+    border: none ;
+    z-index: 1 ;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.progress-bar-front {
+    position: absolute;
+    height: 8px;
+    width: 0%;
+    background : $gradient ;
+    border-radius: $rs ;
+    border: none ;
+    z-index: 1;
+    margin: 0;
+    top: 50% ;
+    transform: translateY(-50%);
+    transition: 0.4s linear width;
+}
+.step {
+    width: calc(100% / 4 - 20px);
+    height: 40px ;
+    border-radius: $rp ;
+    @include flex(center, center, 0) ;
+    z-index: 3 ;
+    border: 1px solid transparent ;
+    background-color: $bg;
+    display: none !important;
+}
+.step.checked {
+    transition: all 0.4s linear ;
+    transition-delay: 0.6s ;
+    background: $gradient ;
+}
+@media (max-width: 500px) {
+    .progress-container {
+      width: 90vw;
+    }
+  }
+  

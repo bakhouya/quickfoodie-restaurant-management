@@ -1,0 +1,27 @@
+.item_primary_list {
+    padding: 3px ;
+    cursor: pointer;
+}
+.settings_web {
+    padding: $sp ;
+}
+.form_block {
+    width: 600px ;
+    // margin:auto ;
+}
+.item_list {
+    padding: $pp ;
+    background-color: $face ;
+    border-radius: $rp ;
+    @include flex(start,center,6px) ;
+    position: relative ;
+    // border: 1px solid $border ;
+    cursor: pointer;
+    transform:  translateY(100px) scale(0.6);
+    animation: identifier linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% ;
+    .body_item {
+        width: calc(100% - 80px);
+    }
+}

@@ -1,0 +1,6 @@
+@mixin greenTest($theme) {
+    @if $theme == 'greenTest' {
+        --primary-color        : #13976b  ;
+        --secoundary-color     : #ff4b04  ;
+    }
+}

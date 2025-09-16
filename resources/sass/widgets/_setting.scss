@@ -1,0 +1,113 @@
+.settings_content {
+    padding: $sp ;
+    @include grid(2) ;
+    gap: $pp ;
+}
+.card_setting {
+    border: 1px solid $border ;
+    border-radius: $rp ;
+    cursor: pointer;
+    background-color: $face ;
+    @include flex(start, center,0) ;
+    &:hover {
+        border-color: $primary-color ;
+    }
+}
+.header_card_setting {
+    width: 80px ;
+    aspect-ratio: 4/4 ;
+    border-inline-end: 1px solid $border ;
+    background-color: $face ;
+    border-radius: $rp ;
+    @include flex(center, center, 0) ;
+    img {
+        height: 60px ;
+        margin: auto ;
+    }
+}
+.body_card_setting {
+    padding: $ps ;
+    width: calc(100% - 60px);
+}
+// ====================search===========================
+.search_items {
+    @include flex(space-between,center,$pp) ;
+    height: $hp ;
+    padding-inline: $pp ;
+    border-bottom: 1px solid $border ;
+    .box_search {
+        border: 1px solid $border ;
+        height:48px ;
+        border-radius: $rp ;
+        width: calc(100% - 100px);
+        // background-color: $face ;
+    }
+}
+
+
+.settings_container {
+    padding-inline: 0 ;
+}
+.body_container_settings {
+    @include flex(start,start,0) ;
+    .nav_settings {
+        width: $nav-h  ;
+        padding: $ps ;
+        position: sticky ;
+        top: calc($hp);
+    }
+    .settings_container {
+        min-height: calc(100vh - $hp) ;
+        width: calc(100% - $nav-h) ;
+        border-inline-start: 1px solid $border ;
+    }
+}
+.item_nav_settings {
+    display: block ;
+    padding: $ps ;
+    border-radius: $rp ;
+    &:hover {
+        background-color: $face ;
+    }
+}
+.wrapper_settings {
+    margin: auto ;
+}
+.box_settings {
+    @include grid(1) ;
+    gap: $pp ;
+    padding: $pp ;
+}
+.box_option_settings {
+    padding:$ps;
+    border-radius: $rp ;
+    background-color: $face ;
+    cursor: pointer !important;
+}
+
+// =======================
+.items_cards_settings {
+    padding:$pp ;
+}
+.row_settings_fields{
+    @include grid(1) ;
+    gap: $pp ;
+    padding:$pp;
+    border-radius: $rp ;
+    background-color: $face ;
+    .row_settings_field{
+        @include grid(1) ;
+        gap: $pp ;
+    }
+}
+.worning_text {
+    font-size: 15px ;
+    // color: $small-text ;
+    color: $primary-color ;
+}
+.field_file_settings {
+    @include flex(start,start,$ps) ;
+    .form_file {
+        width: calc(100% - 150px);
+    }
+}

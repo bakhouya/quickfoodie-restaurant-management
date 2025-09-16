@@ -1,0 +1,1 @@
+@component('widgets.components.select-box')@endcomponent

@@ -1,0 +1,11 @@
+@mixin dark_2($theme) {
+    @if $theme == 'dark_2' {
+        --face        : #1a1c22   ;
+        --bg          : #14161b   ;
+        --border      : #1e2227   ;
+
+        --primary-text        : #dee0e6  ;
+        --secoundary-text     : #cfd1d6  ;
+        --small-text          : #9fa1a5  ;
+    }
+}

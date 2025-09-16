@@ -1,0 +1,8 @@
+@mixin blueTest($theme) {
+    @if $theme == 'blueTest' {
+        // --primary-color        : #188882  ;
+        --primary-color        : #1cadda  ;
+        --secoundary-color     : #ff6804  ;
+    }
+}
+// #0e6460

@@ -1,0 +1,18 @@
+@mixin dark_3($theme) {
+    @if $theme == 'dark_3' {
+        --face        : #232423  ;
+        --bg          : #1e1f1e  ;
+        --border      : #262926  ;
+        // --bg : rgb(17 24 39 / 1) ;
+        // --face        : rgb(26, 35, 48)  ;
+        // --border      : rgb(20, 27, 43) ;
+        --primary-text        : #dcdfe6  ;
+        --secoundary-text     : #cfd1d6  ;
+        --small-text          : #9fa1a5  ;
+    }
+}
+// #A8DADC #004D61
+
+// #FFC1CC
+
+// #B39CD0

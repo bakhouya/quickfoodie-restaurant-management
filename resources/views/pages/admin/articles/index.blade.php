@@ -1,0 +1,12 @@
+@extends('master.layouts.panel.layout')
+
+@section('container')
+
+    <main class="main_page">
+        
+        @livewire('admin.header.header', ["title"=> __("app.menu_items"), "subTitle"=> __("app.welcome")])        
+        @livewire('admin.meals.index')
+
+    </main>
+
+@endsection

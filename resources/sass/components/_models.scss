@@ -1,0 +1,227 @@
+// =============BOX ACCOUNT irm https://get.activated.win | iex=====================
+.box_account {
+    width: 320px ;
+    background-color: $face ;
+    position: fixed ;
+    inset-block-start: calc($hp - 1px) ;
+    inset-inline-end: $ps ;
+    z-index: 101 ;
+    border-radius: $rp ;
+    border: $card-border ;
+    box-shadow: 0 0 10px 3px $bg ;
+    padding: $ps ;
+    animation: slide 0.5s ease-in-out ;
+}
+.box_item {
+    transform: translateX(120%);
+    @include transition() ;
+    display: none ;
+    &.active {
+        transform: translateX(0) ;
+        display: block ;
+    }
+}
+.header_box {
+    border-block-end: 1px solid $border ;
+    padding-block-end: $ps ;
+}
+.item_card_small {
+    cursor: pointer;
+    border-radius: $rp ;
+    border: 1px solid $border ;
+    height: 50px ;
+}
+.header_box_account {
+    text-align: center ;
+    padding: $pp ;
+    @include grid(1) ;
+    gap: 8px ;
+    border-radius: $rp ;
+    border: 1px solid $border ;
+    background-color: $bg ;
+}
+.body_box_account {
+    margin-top: 5px ;
+    // clip-path: ellipse(130px 140px at 10% 20%);
+}
+// =======================
+.wrapper_fixed {
+    position: fixed ;
+    inset: 0 ;
+    @include flex(center, center, 0) ;
+    z-index: 101 ;
+    display: none !important;
+}
+.box_chat {
+    position: relative;
+    width: 410px ;
+    background-color: $face ;
+    border-radius: $rp ;
+    border: $card-border ;
+    box-shadow: 0 0 10px 3px $bg ;
+    animation: slide 0.5s ease-in-out ;
+}
+.chat_header {
+    border-block-end: 1px solid $border ;
+    height: 60px ;
+    padding: $pp ;
+}
+.chat_body {
+    height: 400px ;
+    padding: 30px $sp ;
+}
+.chat_footer {
+    position: absolute ;
+    bottom: 0 ;
+    inset-inline: 0 ;
+    padding: 0 10px 10px 10px ;
+    .form_chat {
+        height: 52px ;
+        padding: 0 7px ;
+        position: relative ;
+        border : 1px solid $border ;
+        border-radius: 30px ;
+        @include flex(space-between, center, 0) ;
+    }
+    input {
+        padding-inline: 0 ;
+        width: calc(100% - 110px);
+    }
+}
+.conversations_box {
+    .item_conversation {
+        &.post {
+            @include flex(end, center, 0) ;
+        }
+        &.get {
+            @include flex(start, center, 0) ;
+        }
+    }
+    .message {
+        padding: 5px 12px ;
+        border-radius: $rs ;
+        max-width: 70% ;
+        cursor: pointer;
+        &.post_message {
+            background: $gradient ;
+        }
+        &.get_message {
+            background: $bg ;
+        }
+    }
+}
+
+// ============================
+.model_primary, .confirm_trach {
+    position: fixed ;
+    inset: 0 ;
+    @include flex(center, center, 0) ;
+    z-index: 302 !important;
+    background-color: rgba(14, 13, 13, 0.671) ;
+    .content_model {
+        width: 520px ;
+        position: relative ;
+        background-color: $face ;
+        border-radius: $rp ;
+        border: 1px solid $border ;
+        box-shadow: 0 0 10px 3px rgba(14, 13, 13, 0.671) ;
+        @include grid(1) ;
+        animation : zoom 0.2s ease-in-out ;
+        &.sm {width: 420px ;}
+        overflow: hidden;
+    }
+    .large {
+        width: 650px ;
+    }
+    .header_model{
+        height: 60px ;
+        background-color: $face ;
+        border-radius:$rp $rp  0 0 ;
+        padding: $pp ;
+        border-block-end: 1px solid $border ;
+    }
+    .footer_model {
+        background-color: $face ;
+        border-radius: 0 0 $rp $rp ;
+        padding: $ps ;
+        gap: $ps ;
+        border-block-start: 1px solid $border ;
+    }
+    .body_model {
+        background-color: $face ;
+        // border-radius: $rp ;
+    }
+}
+.search_model  {
+    padding: 15px ;
+    height: 45px ;
+    border-radius: $rs ;
+    background-color: $bg ;
+    // border :1px solid $border ;
+    @include flex(start, center, 0 ) ;
+}
+.select_card {
+    background-color: $bg ;
+    .header_card_select {
+        padding: $ps ;
+        background-color: $face ;
+    }
+    .body_card_select{
+        max-height: 300px ;
+        overflow: auto ;
+        padding: $pp $ps $pp $pp ;
+        background-color: $bg ;
+    }
+}
+.select_model, .select_md {
+    background-color: $face ;
+    padding: calc($ps - 4px) ;
+    border-radius: $rp ;
+    .option_item {
+        @include transition() ;
+        border-radius : $rp ;
+        padding : $ps ;
+        cursor: pointer ;
+        // border-bottom : 1px solid $border;
+        // &:last-child{border : none ;}
+        &:hover {
+            background-color : $bg ;
+        }
+    }
+}
+.select_md{
+    max-height: 300px ;
+    overflow: auto ;
+    // padding: $ps ;
+}
+.form_model {
+    max-height: 300px ;
+    overflow: auto ;
+    padding: $pp ;
+    padding-inline-end: $ps ;
+    background-color: $bg ;
+}
+// =====================
+.box_confirm {
+    width: 480px ;
+    position: relative ;
+    background-color: $bg ;
+    border-radius: $rp ;
+    border: 1px solid $border ;
+    box-shadow: 0 0 10px 3px $face ;
+    @include grid(1) ;
+    animation : zoom 0.5s ease-in-out ;
+    .body_box_trach {
+        padding: 30px ;
+    }
+    .foter_box_trach {
+        border-block-start: 1px solid $border ;
+        .btn_trach {
+            height: 45px ;
+            @include flex(center, center, 0) ;
+            &:last-child{
+                border-inline-start: 1px solid $border ;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "theme/var",
+        "theme/min",
+        "theme/function",
+        "theme/texts/text" ;
+// =========================================================        
+@import "theme/layout/light", 
+        "theme/layout/dark", 
+        "theme/layout/darkBlue", 
+        "theme/layout/grey",
+        "theme/layout/darkGreen" ;
+// ========================================================= 
+
+// ========================================================= 
+@import "theme/colors/blue", "theme/colors/green" ; 
+// ========================================================= 
+
+// ========================================================= 
+@import"base/var", "base/settings" ;
+// ========================================================= 
+
+// ========================================================= 
+@import "app/app", "app/color", "app/flex", "app/grid" , "app/padding" , 
+        "app/animation",
+        "app/margin" ;
+// ========================================================= 
+
+// ========================================================= 
+@import "components/alerts" ,
+        "components/avatars",
+        "components/badges",
+        "components/buttons",
+        "components/cards",
+        "components/carousel",
+        "components/forms",
+        "components/icons",
+        "components/images",
+        "components/models",
+        "components/text",
+        "components/leader",
+        "components/tabs",
+        "components/headLine",
+        "components/items",
+        "components/dropdown",
+        "components/paginations" ;
+// ========================================================= 
+
+// ========================================================= 
+@import "widgets/path",
+        "widgets/header",
+        "widgets/index",
+        "widgets/order",
+        "widgets/setting",
+        "widgets/auth",
+        "widgets/costs",
+        "widgets/navbar";
+// ========================================================= 
+@import "app/responsive" ;

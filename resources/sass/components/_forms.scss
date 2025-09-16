@@ -1,0 +1,232 @@
+input, textarea , select{
+    border: 0 ;
+    outline: 0 ;
+    background-color: transparent ;
+    width: 100% ;
+    height: 100% ;
+    font-family: $font ;
+    color: $primary-text ;
+    font-size: $ss ;
+    font-weight: $weight-s;
+    padding-inline-start : $sp ;
+    &::placeholder {
+        font-size: $size-s ;
+        font-family: $font ;
+        text-transform: capitalize !important;
+        font-weight: 300 !important;
+    }
+}
+.fixed {
+    inset: 0 ;
+    z-index : 10 ;
+}
+// ========================================
+.header_form {
+    position: relative;
+    height:48px ;
+    width: 100% ;
+    @include flex(space-between, center, 0) ;
+    &::after {
+        content: "" ;
+        position: absolute ;
+        height: 0.4px ;
+        background-color: $border ;
+        border-radius: $rp ;
+        inset-inline: 0 ;
+        inset-block: 50% ;
+    }
+    .text {
+        background-color: $bg ;
+        position: relative;
+        z-index: 1 ;
+        padding-inline-end: $pp ;
+        font-size: 22px ;
+    }
+} 
+// ========================================
+.field_primary {
+    position: relative ;
+    @include flex(space-between, start, 0) ;
+}
+.field_input, .select_field {
+    position: relative;
+    @include transition() ;
+    height: 50px ;
+    outline: 1px solid $border ;
+    border-radius: $rp ;
+    width: 100% ;
+    appearance: none ;
+    -webkit-appearance: none ;
+    -moz-appearance: none ;
+    &:hover {
+        outline-color:  $primary-color ;
+        .group_team {
+            border-color: $primary-color ;
+        }
+    }
+}
+.select_field{
+    position: relative ;
+    padding-inline-start: $pp ;
+    &::after {
+        content: "\25BC" ;
+        position: absolute ;
+        top:50% ;
+        inset-inline-end: 10px ;
+        transform: translateY(-50%);
+        font-size: 18px ;
+        color: $primary-text ;
+        pointer-events: none ;
+    }
+    .select_options {
+        display: none ;
+        position: absolute ;
+        bottom:100% ;
+        width:100% ;
+        inset-inline: 0 ;
+        border: 1px solid $border ;
+        background-color: $bg ;
+        border-radius: $rp ;
+        box-shadow: 0 0 10px 3px rgba(32, 28, 28, 0.534) ;
+        z-index: 200 ;
+        padding: 3px ;
+    }
+    .options {
+        max-height: 160px ;
+        overflow: auto ; 
+        padding-inline-start: 8px ;       
+        .option_field {
+            padding:$ps $pp ;
+            border-radius: $rp ;
+            cursor: pointer;
+            display: block;
+            &:hover {
+                background-color: $primary-color ;
+            }
+        }
+    }
+    &:hover {
+        .select_options{
+            display: block ;
+        }
+    }
+}
+.search_select {
+    background-color: $face ;
+    border-radius: $rs ;
+    height: 40px ;
+    margin :  8px 8px 0 8px ;
+}
+.field_group {
+    @include flex(space-between, center, 0) ;
+    .group_team {
+        @include transition() ;
+        padding-inline: 10px ;
+        height: 100% !important;
+        border-inline-start: 1px solid $border ;
+        @include flex(center, center, 0) ;
+    }
+}
+.field_status {
+    cursor: pointer;
+}
+.error_field {
+    outline :1px solid $danger-color !important ;
+}
+// =================================================
+.field_file {
+    height: 150px ;
+    cursor: pointer;
+    border-radius: $rp ;
+    border: 2px dashed $border ;
+    @include flex(center, center, 0) ;
+    @include transition() ;
+    &:hover {
+        border-color: $primary-color ;
+    }
+}
+
+
+
+// =================================
+// ==================switch=====================
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+    display: none ;
+}
+.switch_primary{
+	cursor: pointer;
+	text-indent: -9999px ;
+	width: 40px ;
+	height: 22px ;
+	background: $border ;
+	display: block ;
+	border-radius: $rs ;
+	position: relative ;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2px ;
+        left: 2px ;
+        width: 18px ;
+        height: 18px ;
+        background: $face ;
+        border-radius: $rs ;
+        transition: 0.3s;
+    }
+}
+input:checked + .switch_primary {
+	background: $primary-color ;
+}
+input:checked + .switch_primary:after {
+	transform: translateX(-100%);
+    left: calc(100% - 3px) ;
+}
+.switch_primary:active:after {
+	width: 23px ;
+}
+.field_checkbox {
+    .checkbox {
+        width: 20px ;
+        height: 20px ;
+        border: 1px solid $border ;
+        border-radius: $rx ;
+        position: relative;
+        cursor: pointer ;
+    }
+    input {
+        &:checked + .checkbox {
+            background: $gradient ;
+        }
+    }
+}
+
+
+
+
+.rating {
+    display: inline-block ;
+    gap: 10px ;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    float: right ;
+    cursor: pointer;
+    color: $face ;
+    transition: color 0.3s;
+}
+.rating label:before {
+    content: '\2605';
+    font-size: 30px;
+} 
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: $primary-color;
+    transition: color 0.3s;
+}
+  

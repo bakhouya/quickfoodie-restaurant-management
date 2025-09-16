@@ -1,0 +1,30 @@
+
+// =======================================================================
+.grid-primary {
+    display: grid ;
+    grid-template-columns: 1fr 2fr 1fr ;
+}
+.item-grid {
+    &:nth-child(1) , &:nth-child(3){
+        height: calc(100vh - $hp);
+        position: sticky ;
+        top: $hp ;
+    }
+    &:nth-child(2) {
+        border-inline : 1px solid $border ;
+        padding-top: calc($hp) ;
+    }
+    
+}
+
+
+.link_primary {
+    cursor: pointer;
+    border-radius: $rp ;
+    padding: 10px $pp ;
+    @include flex(start, center, $pp) ;
+    &:hover {
+        background-color: $bg ;
+    }
+}
+
